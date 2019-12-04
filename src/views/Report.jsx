@@ -54,7 +54,7 @@ componentDidMount(){
 
 
 reportList(){
-    return this.state.report.map(currentreport => {
+    return this.state.report.reverse().map(currentreport => {
         return <ReportList report={currentreport} key={currentreport._id}/>;
     })
 }

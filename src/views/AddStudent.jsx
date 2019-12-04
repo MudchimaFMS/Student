@@ -160,8 +160,8 @@ onSubmit(e){
                           onChange:this.onChangeFaculty
                         },
                         {
-                          label: "Grade",
-                          type: "text",
+                          label: "Year",
+                          type: "number",
                           bsClass: "form-control",
                           placeholder: "Grade",
                           onChange:this.onChangeGrade
