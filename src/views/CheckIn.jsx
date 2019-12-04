@@ -58,7 +58,7 @@ onSubmit(e){
   const Year = new Intl.DateTimeFormat('en-US', {year: 'numeric'}).format(timestamp)
   const Time = new Intl.DateTimeFormat('en-Us',{ hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
   
-  axios.get('http://localhost:5000/persons/'+this.state.rfid)
+  axios.get('http://3.135.62.15:5000/persons/'+this.state.rfid)
     .then(res => {
         console.log(res.data);
         this.setState({
@@ -81,7 +81,7 @@ onSubmit(e){
             Year : Year,
             Time : Time
           };
-        axios.post('http://localhost:5000/reports/add',newreport)
+        axios.post('http://3.135.62.15:5000/reports/add',newreport)
         .then(res => console.log(res.data));
         window.location = '/';
         this.setState({

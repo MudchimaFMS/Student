@@ -40,7 +40,7 @@ class ListStudent extends Component {
 }
 
 componentDidMount(){
-    axios.get('http://localhost:5000/persons/')
+    axios.get('http://3.135.62.15:5000/persons/')
         .then(response => {
             this.setState({
                 people: response.data
@@ -53,6 +53,7 @@ componentDidMount(){
 
 
 peopleList(){
+
     return this.state.people.map(currentperson => {
         return <PeopleList person={currentperson} key={currentperson._id}/>;
     })

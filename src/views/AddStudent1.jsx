@@ -48,7 +48,7 @@ onChangeRfid(e){
 
 onSubmit(e){
   e.preventDefault();
-//   axios.get('http://localhost:5000/persons/'+this.state.rfid)
+//   axios.get('http://3.135.62.15:5000/persons/'+this.state.rfid)
 //     .then(res => {
 //         this.setState({
 //             check : res.data
