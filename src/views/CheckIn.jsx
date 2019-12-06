@@ -52,51 +52,15 @@ onChangeRfid(e){
 
 onSubmit(e){
   e.preventDefault();
-  const timestamp = Date.now(); // This would be the timestamp you want to format
-  const Day = new Intl.DateTimeFormat('en-US', {day: '2-digit'}).format(timestamp)
-  const Month = new Intl.DateTimeFormat('en-US', {month: '2-digit'}).format(timestamp)
-  const Year = new Intl.DateTimeFormat('en-US', {year: 'numeric'}).format(timestamp)
-  const Time = new Intl.DateTimeFormat('en-Us',{ hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-  
-  axios.get('http://3.135.62.15:5000/persons/'+this.state.rfid)
-    .then(res => {
-        console.log(res.data);
-        this.setState({
-            rfid: res.data[0].rfid,
-            studentid: res.data[0].studentid,
-            FirstName: res.data[0].FirstName,
-            LastName: res.data[0].LastName,
-            Faculty: res.data[0].Faculty,
-            Grade: res.data[0].Grade
-        })
-        const newreport ={
-            rfid : this.state.rfid,
-            studentid : this.state.studentid,
-            FirstName : this.state.FirstName,
-            LastName : this.state.LastName,
-            Faculty : this.state.Faculty,
-            Grade : this.state.Grade,
-            Day : Day,
-            Month : Month,
-            Year : Year,
-            Time : Time
-          };
-        axios.post('http://3.135.62.15:5000/reports/add',newreport)
-        .then(res => console.log(res.data));
-        window.location = '/';
-        this.setState({
-          rfid : '',
-          studentid : '',
-          FirstName : '',
-          LastName : '',
-          Faculty : '',
-          Grade : '',
-          Day : '',
-          Month : '',
-          Year : '',
-          Time : ''
-        })
-    });
+  const rfidjson ={
+      rfid : this.state.rfid,
+    };
+  axios.post('http://3.135.62.15:5000/reports/add',rfidjson)
+  .then(res => console.log(res.data));
+  window.location = '/';
+  this.setState({
+    rfid : ''
+  })
 }
   render() {
     return (

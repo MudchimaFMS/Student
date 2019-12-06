@@ -26,7 +26,7 @@ const ReportList = props => (
         <td>{props.report.FirstName}  {props.report.LastName}</td>
         <td>{props.report.Faculty}</td>
         <td>{props.report.Grade}</td>
-        <td>{props.report.Day}/{props.report.Month}/{props.report.Year}@{props.report.Time}</td>
+        <td>{props.report.Time}</td>
     </tr>
 )
 class Report extends Component {
