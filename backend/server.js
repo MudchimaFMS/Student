@@ -45,7 +45,7 @@ app.post('/persons/add',(req, res) => {
     const LastName = req.body.LastName;
     const Faculty = req.body.Faculty;
     const Grade = req.body.Grade;
-    let query = "INSERT INTO people(rfid,studentid,FirstName,LastName,Faculty,Grade) values('"+rfid+"','"+studentid+rfid+"','"+FirstName+"','"+LastName+"','"+Faculty+"','"+Grade+"')";
+    let query = "INSERT INTO people(rfid,studentid,FirstName,LastName,Faculty,Grade) values('"+rfid+"','"+studentid+"','"+FirstName+"','"+LastName+"','"+Faculty+"','"+Grade+"')";
     con.query(query,function (err, result, fields) {
         if (err) throw err;
         res.json('Success');
@@ -70,7 +70,7 @@ app.post('/reports/add',(req, res) => {
     let query = "INSERT INTO report(rfid) values('"+rfid+"')";
     con.query(query,function (err, result, fields) {
         if (err) throw err;
-        res.json(result);
+        res.json('Success');
     });
 });
 

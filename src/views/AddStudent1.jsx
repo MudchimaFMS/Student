@@ -48,12 +48,6 @@ onChangeRfid(e){
 
 onSubmit(e){
   e.preventDefault();
-//   axios.get('http://18.188.248.160:5000/persons/'+this.state.rfid)
-//     .then(res => {
-//         this.setState({
-//             check : res.data
-//         })
-//     });
     window.location = '/admin/regis/'+this.state.rfid;
 }
   render() {
