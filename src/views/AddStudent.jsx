@@ -77,6 +77,11 @@ onChangeGrade(e){
       grade: e.target.value
   });
 }
+onChangeSubject(e){
+  this.setState({
+      subject: e.target.value
+  });
+}
 onSubmit(e){
   e.preventDefault();
   const newperson ={
@@ -86,6 +91,7 @@ onSubmit(e){
     LastName : this.state.lastname,
     Faculty : this.state.faculty,
     Grade : this.state.grade,
+    Subject = this.state.subject,
   };
   axios.post('http://3.19.57.234:5000/persons/add',newperson)
     .then(res => console.log(res.data));
@@ -97,6 +103,7 @@ onSubmit(e){
           lastname : '',
           faculty : '',
           grade : '',
+          subject : '',
         })
 }
   render() {
@@ -165,6 +172,18 @@ onSubmit(e){
                           bsClass: "form-control",
                           placeholder: "Grade",
                           onChange:this.onChangeGrade
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-6"]}
+                      properties={[
+                        {
+                          label: "Subject",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Subject",
+                          onChange:this.onChangeSubject
                         }
                       ]}
                     />

@@ -26,6 +26,7 @@ const PeopleList = props => (
         <td>{props.person.FirstName}  {props.person.LastName}</td>
         <td>{props.person.Faculty}</td>
         <td>{props.person.Grade}</td>
+        <td>{props.person.Subject}</td>
     </tr>
 )
 class ListStudent extends Component {
@@ -78,6 +79,7 @@ peopleList(){
                         <td>ชื่อ - นามสกุล</td>
                         <td>คณะที่ศึกษา</td>
                         <td>ชั้นปีการศึกษา</td>
+                        <td>รายวิชา</td>
                       </tr>
                     </thead>
                     <tbody>

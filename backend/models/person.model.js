@@ -9,6 +9,7 @@ const personData = new Schema({
     LastName: { type: String, required: true},
     Faculty: { type: String, required: true},
     Grade: { type: String, required: true},
+    Subject: {type: String, required: true}
 },{
     timestamps: true,
 });
