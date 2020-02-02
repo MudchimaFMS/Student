@@ -91,7 +91,7 @@ onSubmit(e){
     LastName : this.state.lastname,
     Faculty : this.state.faculty,
     Grade : this.state.grade,
-    Subject = this.state.subject,
+    Subject : this.state.subject,
   };
   axios.post('http://3.19.57.234:5000/persons/add',newperson)
     .then(res => console.log(res.data));
