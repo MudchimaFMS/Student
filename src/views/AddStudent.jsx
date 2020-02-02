@@ -87,7 +87,7 @@ onSubmit(e){
     Faculty : this.state.faculty,
     Grade : this.state.grade,
   };
-  axios.post('http://18.188.248.160:5000/persons/add',newperson)
+  axios.post('http://3.19.57.234:5000/persons/add',newperson)
     .then(res => console.log(res.data));
     window.location = '/';
         this.setState({
