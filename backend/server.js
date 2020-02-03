@@ -52,6 +52,7 @@ app.post('/persons/add',(req, res) => {
         res.json('Success');
     });
 });
+
 app.get('/reports',(req, res) => {
     let query = "SELECT * FROM report JOIN people ON people.rfid = report.rfid";
     con.query(query,function (err, result, fields) {
@@ -74,7 +75,18 @@ app.post('/reports/add',(req, res) => {
         res.json('Success');
     });
 });
-
+app.post('/reports/process',(req, res) => {
+    const datestart = req.body.datestart;
+    const dateend = req.body.dateend;
+    const subject = req.body.subject;
+    console.log(req.body)
+    let query = `SELECT * FROM report JOIN people ON people.rfid = report.rfid WHERE report.Time >= '${datestart}' AND report.Time <= '${dateend}' AND people.Subject = '${subject}'`;
+    con.query(query,function (err, result, fields) {
+        if (err) throw err;
+        console.log(result)
+        res.json(result);
+    });
+});
 app.listen(port,()=>{
     console.log(`Server is running on port: ${port}`);
 });

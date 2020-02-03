@@ -19,6 +19,7 @@ import CheckIn from "views/CheckIn.jsx";
 import Report from "views/Report.jsx";
 import ListStudent from "views/ListStudent.jsx";
 import AddStudent1 from "views/AddStudent1.jsx";
+import Process from "views/Process.jsx";
 
 const dashboardRoutes = [
   {
@@ -47,6 +48,13 @@ const dashboardRoutes = [
     name: "Add Student",
     icon: "pe-7s-user",
     component: AddStudent1,
+    layout: "/admin"
+  },
+  {
+    path: "/process",
+    name: "Process",
+    icon: "pe-7s-user",
+    component: Process,
     layout: "/admin"
   },
 ];
