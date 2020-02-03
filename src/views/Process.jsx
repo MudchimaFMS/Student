@@ -40,8 +40,8 @@ class AddStudent extends Component {
         this.state = {
             data: [],
             subject: '477-202',
-            datestart: moment().format(format),
-            dateend: moment().add(1, 'days').format(format)
+            datestart: moment().hours(0).minutes(0).seconds(0).format(format),
+            dateend: moment().add(1, 'days').hours(0).minutes(0).seconds(0).format(format)
         };
     }
     onSubmit = (e) => {
