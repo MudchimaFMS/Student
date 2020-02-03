@@ -37,7 +37,7 @@ class AddStudent extends Component {
     this.onChangeLastname = this.onChangeLastname.bind(this);
     this.onChangeFaculty = this.onChangeFaculty.bind(this);
     this.onChangeGrade = this.onChangeGrade.bind(this);
-    this.onChangeSubmit = this.onChangeSubmit.bind(this);
+    this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
       rfid : this.props.match.params.rfid,
