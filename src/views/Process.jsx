@@ -52,7 +52,7 @@ class AddStudent extends Component {
             subject: this.state.subject
         };
         console.log(data)
-        axios.post('http://3.19.57.234:5000/reports/process', data)
+        axios.post('http://localhost:5000/reports/process', data)
             .then(res => {
                 this.setState({ data: res.data })
                 console.log(res.data)
@@ -94,7 +94,7 @@ class AddStudent extends Component {
                     <Row>
                         <Col md={12}>
                             <Card
-                                title="Process"
+                                title="รายงานการเข้าชั้นเรียนย้อนหลัง"
                                 content={
                                     <Fragment>
                                         <form
@@ -120,7 +120,7 @@ class AddStudent extends Component {
                                                 type="datetime-local"
                                                 defaultValue={this.state.dateend}
                                                 onChange={this.onChangeDateTime}
-                                                // className={classes.textField}
+                                                className="text-field"
                                                 InputLabelProps={{
                                                     shrink: true,
                                                 }}
@@ -131,7 +131,7 @@ class AddStudent extends Component {
                                             <option>477-302</option>
                                             </select>
                                             <Button bsStyle="info" pullRight fill type="submit">
-                                                Submit
+                                                ยืนยัน
                                             </Button>
                                         </form>
                                         <Table striped hover>
@@ -154,6 +154,8 @@ class AddStudent extends Component {
                         </Col>
                     </Row>
                 </Grid>
+                <span>1.ผู้ใช้งานสามารถเลือกเวลาเรียนในคาบนั้นๆได้</span><br></br>
+                <span>2.ผู้ใช้งานสามารถเลือกวิชาที่ต้องการได้</span>
             </div>
         );
     }

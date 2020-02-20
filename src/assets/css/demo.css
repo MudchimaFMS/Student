@@ -785,3 +785,6 @@ left: -6px;
 margin-top: -7px;
 border-width: 7px 7px 7px 0;
 }
+.text-field {
+  font-size: 18px;
+}

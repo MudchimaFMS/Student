@@ -41,7 +41,7 @@ class ListStudent extends Component {
 }
 
 componentDidMount(){
-    axios.get('http://3.19.57.234:5000/persons/')
+    axios.get('http://localhost:5000/persons/')
         .then(response => {
             this.setState({
                 people: response.data
@@ -67,8 +67,8 @@ peopleList(){
           <Row>
             <Col md={12}>
               <Card
-                title="Student List"
-                category="Overview"
+                title="รายชื่อนักศึกษา"
+               
                 ctTableFullWidth
                 ctTableResponsive
                 content={

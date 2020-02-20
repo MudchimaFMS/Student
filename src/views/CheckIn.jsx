@@ -55,7 +55,7 @@ onSubmit(e){
   const rfidjson ={
       rfid : this.state.rfid,
     };
-  axios.post('http://3.19.57.234:5000/reports/add',rfidjson)
+  axios.post('http://localhost:5000/reports/add',rfidjson)
   .then(res => console.log(res.data));
   window.location = '/';
   this.setState({
@@ -69,13 +69,13 @@ onSubmit(e){
           <Row>
             <Col md={12}>
               <Card
-                title="Check IN"
+                title="เช็คชื่อเข้าชั้นเรียน"
                 content={
                   <form onSubmit={this.onSubmit}>
                      <Label for="rfid">RFID</Label>
                       <Input type="text" id="rfid" autoFocus onChange={this.onChangeRfid} placeholder="RFID" required/>
                     <br></br><Button bsStyle="info" pullRight fill type="submit">
-                      CHECK IN
+                      ยืนยัน
                     </Button>
                     <div className="clearfix" />
                   </form>
@@ -84,6 +84,7 @@ onSubmit(e){
             </Col>
           </Row>
         </Grid>
+        <span>-ผู้ใช้งานกรุณาแตะบัตรRFIDกับเครื่องอ่านRFID reader</span><br></br>
       </div>
     );
   }

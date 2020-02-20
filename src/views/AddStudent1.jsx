@@ -57,13 +57,13 @@ onSubmit(e){
           <Row>
             <Col md={12}>
               <Card
-                title="Scan RFID"
+                title="RFID code"
                 content={
                   <form onSubmit={this.onSubmit}>
                      <Label for="rfid">RFID</Label>
                       <Input type="text" id="rfid" autoFocus onChange={this.onChangeRfid} placeholder="RFID" required/>
                     <br></br><Button bsStyle="info" pullRight fill type="submit">
-                      ADD
+                      เพิ่ม
                     </Button>
                     <div className="clearfix" />
                   </form>
@@ -72,6 +72,10 @@ onSubmit(e){
             </Col>
           </Row>
         </Grid>
+        <span>1.แตะบัตรที่เครื่องRFID reader</span><br></br>
+        <span>2.กรอกข้อมูลให้ถูกต้องครบถ้วน</span><br></br>
+        <span>3.กดเพิ่มรายชื่อนักศึกษา</span><br></br>
+        <span>4.หากต้องการเช็คข้อมูลสามารถดูได้ในรายชื่อนักศึกษาทั้งหมด</span><br></br>
       </div>
     );
   }

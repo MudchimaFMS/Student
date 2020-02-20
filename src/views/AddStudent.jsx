@@ -94,7 +94,7 @@ onSubmit(e){
     Grade : this.state.grade,
     Subject : this.state.subject,
   };
-  axios.post('http://3.19.57.234:5000/persons/add',newperson)
+  axios.post('http://localhost:5000/persons/add',newperson)
     .then(res => console.log(res.data));
     window.location = '/';
         this.setState({
@@ -198,6 +198,7 @@ onSubmit(e){
             </Col>
           </Row>
         </Grid>
+        <span>1.ผู้ใช้งานกรุณาแตะบัตรRFID</span><br></br>
       </div>
     );
   }

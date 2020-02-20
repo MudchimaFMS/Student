@@ -66,8 +66,8 @@ reportList(){
           <Row>
             <Col md={12}>
               <Card
-                title="Student List"
-                category="Overview"
+                title="รายชื่อนักศึกษาทั้งหมด"
+                
                 ctTableFullWidth
                 ctTableResponsive
                 content={

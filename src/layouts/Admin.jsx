@@ -178,7 +178,7 @@ class Admin extends Component {
         <div id="main-panel" className="main-panel" ref="mainPanel">
           <AdminNavbar
             {...this.props}
-            brandText="RFID Check In Class"
+            brandText="การพัฒนาโปรแกรมเช็คชื่อเข้าชั้นเรียนด้วยRFID"
           />
           <Switch>{this.getRoutes(routes)}</Switch>
           <Switch>{this.getRoutes(exroutes)}</Switch>

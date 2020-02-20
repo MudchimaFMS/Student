@@ -24,36 +24,36 @@ import Process from "views/Process.jsx";
 const dashboardRoutes = [
   {
     path: "/checkin",
-    name: "Check In",
-    icon: "pe-7s-home",
+    name: "เช็คชื่อเข้าชั้นเรียน",
+    icon: "pe-7s-credit",
     component: CheckIn,
     layout: "/admin"
   },
   {
     path: "/report",
-    name: "report",
-    icon: "pe-7s-graph",
+    name: "รายงานการเข้าชั้นเรียนปัจจุบัน",
+    icon: "pe-7s-note2",
     component: Report,
     layout: "/admin"
   },
   {
     path: "/list",
-    name: "List Student",
-    icon: "pe-7s-usb",
+    name: "รายชื่อนักศึกษาทั้งหมด",
+    icon: "pe-7s-news-paper",
     component: ListStudent,
     layout: "/admin"
   },
   {
     path: "/add",
-    name: "Add Student",
-    icon: "pe-7s-user",
+    name: "เพิ่มรายชื่อนักศึกษา",
+    icon: "pe-7s-add-user",
     component: AddStudent1,
     layout: "/admin"
   },
   {
     path: "/process",
-    name: "Process",
-    icon: "pe-7s-user",
+    name: "รายงานการเข้าชั้นเรียนย้อนหลัง",
+    icon: "pe-7s-date",
     component: Process,
     layout: "/admin"
   },
