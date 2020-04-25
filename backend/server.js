@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 var mysql = require('mysql');
-
 var con = mysql.createConnection({
   host: "18.220.156.63",
   user: "projectuser",
   password: "p@ssw0rd",
-  database: "project"
+  database: "project",
+  timezone: "Asia/Bangkok"
 });
 
 con.connect(function(err) {
@@ -57,6 +57,7 @@ app.get('/reports',(req, res) => {
     let query = "SELECT * FROM report JOIN people ON people.rfid = report.rfid";
     con.query(query,function (err, result, fields) {
         if (err) throw err;
+        console.log(result);
         res.json(result);
     });
 });
