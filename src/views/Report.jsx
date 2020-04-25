@@ -41,7 +41,7 @@ class Report extends Component {
 }
 
 componentDidMount(){
-    axios.get('http://3.19.57.234:5000/reports/')
+    axios.get('http://3.23.89.167:5000/reports/')
         .then(response => {
             this.setState({
                 report: response.data

@@ -52,7 +52,7 @@ class AddStudent extends Component {
             subject: this.state.subject
         };
         console.log(data)
-        axios.post('http://localhost:5000/reports/process', data)
+        axios.post('http://3.23.89.167:5000/reports/process', data)
             .then(res => {
                 this.setState({ data: res.data })
                 console.log(res.data)

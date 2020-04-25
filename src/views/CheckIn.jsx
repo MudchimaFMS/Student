@@ -55,7 +55,7 @@ onSubmit(e){
   const rfidjson ={
       rfid : this.state.rfid,
     };
-  axios.post('http://localhost:5000/reports/add',rfidjson)
+  axios.post('http://3.23.89.167:5000/reports/add',rfidjson)
   .then(res => console.log(res.data));
   window.location = '/';
   this.setState({

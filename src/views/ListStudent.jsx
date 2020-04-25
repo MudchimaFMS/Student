@@ -41,7 +41,7 @@ class ListStudent extends Component {
 }
 
 componentDidMount(){
-    axios.get('http://localhost:5000/persons/')
+    axios.get('http://3.23.89.167:5000/persons/')
         .then(response => {
             this.setState({
                 people: response.data
